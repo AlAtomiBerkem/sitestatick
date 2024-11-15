@@ -1,14 +1,13 @@
 import './App.css';
-
-import MyComponent from "./myComponent";
+import Header from './companeents/header/header'
  const tg = window.Telegram.WebApp.initData
 
 function App() {
   return (
     <div className="App">
-        привет Сучки)
-        
-        <MyComponent/>
+        <Header/>
+        привет мир
+
     </div>
   );
 }
