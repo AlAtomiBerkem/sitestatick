@@ -5,7 +5,18 @@ export function useTelegram() {
         tg.close()
     }
     
-    return {
+    const onToggleButton = () => {
+        if(tg.mainButton.isVisible) {
+            tg.mainButton.hide();
+        } else {
+            tg.mainButton.show()
+        }
+    }
     
+    return {
+        tg,
+        user: tg.initDataUnsafe?.user,
+        onClose,
+        onToggleButton,
     }
 }
